@@ -12,6 +12,6 @@ do
 done
 
 while true; do
-	cat $passwordfile | openconnect --protocol=pulse --force-dpd=5 --no-dtls --script-tun --script "ocproxy -D $socksport -g -k 15" -u $username --authgroup "NTU EMail Account" --passwd-on-stdin sslvpn2.ntu.edu.tw
+    cat $passwordfile | openconnect --protocol=pulse --force-dpd=5 --no-dtls --script-tun --script "ocproxy -D $socksport -g -k 15" -u $username --authgroup "NTU EMail Account" --passwd-on-stdin sslvpn2.ntu.edu.tw
     sleep 1
 done
