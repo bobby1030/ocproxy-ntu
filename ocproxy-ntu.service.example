@@ -1,0 +1,14 @@
+[Unit]
+Description=OCProxy Service for NTU VPN
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Restart=always
+RuntimeMaxSec=3600
+
+WorkingDirectory=%h/ocproxy-ntu/
+ExecStart=%h/ocproxy-ntu/ocproxy.sh -u "YOUR USERNAME" -s "YOUR PASSWORD FILE" -p 9487
+
+[Install]
+WantedBy=default.target
